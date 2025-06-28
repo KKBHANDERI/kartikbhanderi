@@ -1,0 +1,84 @@
+/* === Photography Page – Masonry Grid with Hover Color Reveal === */
+
+.photo-masonry-section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.photo-title {
+  font-size: 54px;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.caption {
+  font-size: 14px;
+  color: #cc0000;
+  margin-top: 8px;
+  text-align: left;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+/* === Masonry Layout === */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%); 
+  transition: filter 0.5s ease, transform 0.3s ease;
+}
+
+.masonry-item img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .photo-title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .photo-title {
+    font-size: 36px;
+  }
+
+  .masonry-grid {
+    column-count: 1;
+  }
+
+  .caption {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 393px) {
+  .photo-title {
+    font-size: 30px;
+  }
+}
