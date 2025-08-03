@@ -1,6 +1,9 @@
 
   @import url("https://use.typekit.net/yys0lbz.css");
 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -26,111 +29,114 @@ section, .connect-container, .about-wrapper, .gallery, .gallery-grid, .hero-imag
 
 
 
-
-
 /* Header */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 100px;
-  background: white;
-}
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 100px;
+      background: white;
+      position: relative;
+      z-index: 100;
+    }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.logo {
-  height: 40px;
-  width: 340px;
-}
+    .logo {
+      height: 40px;
+      width: 340px;
+    }
 
-.brand {
-  font-size: 28px;
-  color: #c00;
-  font-weight: bold;
-}
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: #111;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #111;
-  font-size: 18px;
-  transition: color 0.3s;
-}
+    .nav-links a:hover {
+      color: #c00;
+    }
 
-.nav-links a:hover {
-  color: #c00;
-}
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
 
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+    /* Responsive */
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 20px;
+        flex-wrap: wrap;
+      }
 
-/* Responsive Header */
-@media (max-width: 700px) {
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    display: none;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-  }
+      .logo {
+        width: 240px;
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .hamburger {
+        display: block;
+      }
 
-  .hamburger {
-    display: block;
-  }
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid #ddd;
+        z-index: 10;
 
-  .logo {
-    height: 40px;
-    width: 240px;
-  }
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+      }
 
-  .site-header {
-    padding: 20px;
-  }
-}
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
 
-@media (max-width: 393px) {
-  .logo {
-    width: 200px;
-  }
+    @media (max-width: 393px) {
+      .logo {
+        width: 200px;
+      }
 
-  .nav-links a {
-    font-size: 16px;
-  }
+      .nav-links a {
+        font-size: 16px;
+      }
 
-  .hamburger {
-    font-size: 24px;
-  }
+      .hamburger {
+        font-size: 24px;
+      }
 
-  .site-header {
-    padding: 16px;
-  }
-}
+      .site-header {
+        padding: 16px;
+      }
+    }
 
-
-
-
+    html {
+      scroll-behavior: smooth;
+    }
 
 
 
@@ -191,10 +197,12 @@ section, .connect-container, .about-wrapper, .gallery, .gallery-grid, .hero-imag
 /* Logo positioning */
 .hero-logo {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 10%;
-  width: clamp(12px, 3vw, 25px);
+  width: clamp(px, 3vw, 800px);
+  font-size: clamp(22px, 5vw, 74px);
   height: auto;
+  line-height: 1.4;
 }
 
 /* Text styling */
@@ -203,7 +211,7 @@ section, .connect-container, .about-wrapper, .gallery, .gallery-grid, .hero-imag
   bottom: -10%;
   left: 5%;
   font-size: clamp(28px, 6vw, 74px);
-  line-height: 1.2;
+  line-height: 1.4;
   padding: 0 10px;
   max-width: 90%;
   color: #000;
@@ -222,11 +230,28 @@ section, .connect-container, .about-wrapper, .gallery, .gallery-grid, .hero-imag
   color: #000;
 }
 
+p .red{
+    color: #cc0000;
+}
+
+#fontweight {
+  font-weight: 200;
+  font-style: italic;
+}
+
+#fontsize  {
+    font-size: clamp(22px, 6vw, 74px);
+}
+
 /* Mobile-specific tweaks */
 @media (max-width: 393px) {
   .hero-logo {
-    top: 25%;
-    left: 10%;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: clamp(140px, 3vw, 392px);
+  font-size: clamp(14px, 6vw, 16px);
+  height: auto;
   }
 
   .hero-text {
@@ -373,6 +398,7 @@ section, .connect-container, .about-wrapper, .gallery, .gallery-grid, .hero-imag
   right: 5%;
   text-align: right;
   max-width: 50%;
+  line-height: 1.6;
 }
 
 .about-text h2 {
@@ -790,7 +816,7 @@ strong {
 }
 
 .hover-skill strong::after {
-  content: "⁎";
+  content: "*";
   font-size: 22px;
   color: #cc0000;
   margin-left: 6px;
@@ -888,11 +914,12 @@ strong {
   margin-top: 30px;
 }
 
+
 .services h2 {
   font-size: 60px;
   font-family: 'Gelica', serif;
   margin-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 40px; 
 }
 
 .service-card {
@@ -928,18 +955,29 @@ strong {
   font-size: 15px;
   color: #555;
   margin-bottom: 12px;
+  line-height: 1.8;
+  padding: 20px 0 20px 0;
 }
 
 .order-now {
+  border: 2px solid #cc0000;
   color: #cc0000;
-  font-weight: bold;
-  font-size: 14px;
+  padding: 12px 50px;
+  border-radius: 50px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
 .order-now:hover {
-  color: #cc0000;
+  background-color: #cc0000;
+  color: #fff;
+  transform: scale(1.03);
 }
 
 /* Fade-up animation */
@@ -1000,7 +1038,6 @@ strong {
 
 .full-bg-wrapper {
   width: 100%;
-  background: url('/assets/Background-3.svg') no-repeat center center / cover;
 }
 
 .notes-section {

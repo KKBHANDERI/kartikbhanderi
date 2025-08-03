@@ -4,70 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kartik Bhanderi Header</title>
-  <link rel="stylesheet" href="Style.css"
+  <link rel="stylesheet" href="Style.css"/>
+  <!-- Favicon for light mode -->
+<link rel="icon" href="/assets/Graphic design studies/favicon-light.svg" media="(prefers-color-scheme: light)">
 
-
-  />
+<!-- Favicon for dark mode -->
+<link rel="icon" href="/assets/Graphic design studies/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+  
 </head>
 <body>
+
+
+
   <header class="site-header">
     <div class="logo-container">
-       <a href="index.html">
-      <img src="assets/Logo.svg" alt="Logo" class="logo" />
-        </a>
+      <a href="index.html">
+        <img src="/assets/Logo.svg" alt="Logo" class="logo" />
+      </a>
     </div>
-    <nav class="nav-links" id="navMenu">
+
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
+      <a href="#Work">Work</a>
       <a href="#Aboutme">About me</a>
-      <a href="#work">Work</a>
       <a href="#Contact">Contact</a>
     </nav>
-    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
 
 <section class="hero" id="home">
   <div class="hero-image-wrapper">
-    <img src="assets/Hero section.png" alt="Camera Setup" class="hero-image" />
-    <img src="assets/hero logo.svg" alt="Logo" class="hero-logo" />
+    <img src="assets/hero-section.png" alt="Camera Setup" class="hero-image" />
+    <!-- <img src="assets/hero logo.svg" alt="Logo" class="hero-logo" /> -->  
+    <p class="hero-logo" id="fontweight"> Designing <br> what users <br> truly want <br> <span class="red">clean, simple,<br> and intuitive.</span></p>
     <div class="hero-text">
-      <p><span class="red">I am</span><br><span class="red">the one</span><br><span class="black">who clicks.</span></p>
+      <!-- <p><span class="red" id="fontsize">Designing</span><br><span class="red" id="fontsize">experiences</span><br><span class="black" id="fontsize">not just interfaces.</span></p> -->
     </div>
   </div>
 </section>
 
 <section class="connect">
   <div class="connect-container">
-    <a href="#contact" class="connect-button">
+    <a href="https://www.linkedin.com/in/kartik-bhanderi/" class="connect-button" target="_blank" rel="noopener noreferrer" >
       <span>Let’s Connect</span>
-      <span class="arrow"> <img src="assets/button arrow.svg" alt=""></span>
+      <span class="arrow"> <img src="assets/button-arrow.svg" alt=""></span>
     </a>
     <p class="connect-description">
-      a designer & photographer based in Vancouver, British Columbia. currently crafting visuals at Canadian Premier Supplements — where pixels meet protein, and every project gets the cinematic treatment.
+       A UI/UX and graphic designer based in Grater Vancouver Area. I specialize in crafting clean, user-centered designs that merge functionality with visual elegance. With a focus on intuitive experiences and impactful visuals, I help bring ideas to life across digital and print platforms.
     </p>
   </div>
 </section>
 
 
 
-<img src="assets/section-divider.svg" alt="divider graphic" class="sectiondivider" />
 
 
 
-<section class="about" id="Aboutme">
-  <div class="about-wrapper">
-    <img src="assets/About me.png" alt="Kartik" class="about-image" />
-    <div class="about-text">
-      <h2><span class="red">About</span> <br><span class="red">Me</span><br><span class="black">Kartik</span> <br> <span class="black">Bhanderi</span></h2>
+
+
+<section class="services" id="Work">
+  <h2>What I Do</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <img src="assets/UI:UX.svg" alt="UI UX Design" />
+      <h3>UI UX Design</h3>
+      <p>
+  I design modern, user-focused web and mobile interfaces that balance usability and beauty. Every layout is intuitive, responsive, and crafted to ensure users enjoy a seamless, engaging experience.
+</p>
+
+      <a href="UI-UX Project.html" class="order-now">Case Studies</a>
     </div>
+
+    <div class="service-card">
+      <img src="assets/Graphic design.svg" alt="Multimedia Design" />
+      <h3>Graphic Design</h3>
+      <p>
+  I create compelling visuals through illustration, branding, and graphics. Each design tells a story, combining creativity and strategy to make content stand out across print, digital, and social platforms.
+</p>
+
+      <a href="Graphic-design project.html" class="order-now">checkout designs</a>
+    </div>
+
+      <div class="service-card">
+      <img src="assets/Group.svg" alt="Multimedia Design" />
+      <h3>Photography</h3>
+      <p>
+  I capture cinematic visuals that highlight mood, detail, and story. Whether portraits or landscapes, my photography turns simple moments into striking compositions that leave a impression on viewers.
+</p>
+
+      <a href="photography.html" class="order-now">View Pictures</a>
+    </div>
+
+    <!-- More cards... -->
+
   </div>
-  <p class="about-description">
-    I'm not just designing — I'm cooking math, like Walter White in his RV. With a Bachelor’s in Computer Applications and training at Langara College, I blend creativity with code. Interning at Canadian Premier Supplements, I craft sleek digital solutions. New to the game, but driven. Say my name….
-  </p>
 </section>
 
 
 
-<!-- <img src="assets/section-divider.svg" alt="divider graphic" class="sectiondivider" /> -->
+<img src="assets/section-divider.svg" alt="divider graphic" class="sectiondivider" />
 
 <section class="resume-section">
   <div class="resume-wrapper">
@@ -139,7 +187,7 @@
       </div>
 
       <div class="resume-download">
-        <a href="Kartik-Bhanderi-CV.pdf" download class="download-btn">Download CV</a>
+        <a href="Resume.pdf" download class="download-btn">Download Resume</a>
       </div>
     </div>
   </div>
@@ -152,35 +200,26 @@
 
 
 
-<section class="services">
-  <h2>What i do</h2>
-  <div class="services-grid">
 
-    <div class="service-card">
-      <img src="assets/UI:UX.svg" alt="UI UX Design" />
-      <h3>UI UX Design</h3>
-      <p>Modern web and mobile application UI and UX design.</p>
-      <a href="UI-UX Project.html" class="order-now">checkout Projects</a>
+<img src="assets/section-divider.svg" alt="divider graphic" class="sectiondivider" />
+
+
+
+<section class="about" id="Aboutme">
+  <div class="about-wrapper">
+    <img src="assets/About me.png" alt="Kartik" class="about-image" />
+    <div class="about-text">
+      <h2><span class="red">About</span> <br><span class="red">Me</span><br><span class="black">Kartik</span> <br> <span class="black">Bhanderi</span></h2>
     </div>
-
-    <div class="service-card">
-      <img src="assets/Graphic design.svg" alt="Multimedia Design" />
-      <h3>Graphic Design</h3>
-      <p>Illustration, Digital Media, Animation, Creative Design.</p>
-      <a href="Graphic design.html" class="order-now">checkout some of some designs</a>
-    </div>
-
-      <div class="service-card">
-      <img src="assets/Group.svg" alt="Multimedia Design" />
-      <h3>Photography</h3>
-      <p>photography, where pixal meet perfaction</p>
-      <a href="photography.html" class="order-now">Take a look</a>
-    </div>
-
-    <!-- More cards... -->
-
   </div>
+  <p class="about-description">
+    I’m a UI-UX designer and Front-End developer with a Bachelor’s in Computer Applications and training from Langara College. During my internship at Canadian Premier Supplements, I worked on creating clean and user-friendly digital experiences. I’m still early in my career but motivated to keep learning and building great work.
+  </p>
 </section>
+
+
+
+
 
 
 
@@ -189,33 +228,8 @@
 
 
 
-<!-- 
-<section class="gallery" id="work">
-  <h2 class="gallery-title">
-    <span class="red">Featured Case</span><br>
-    <span class="black">Studies</span>  
 
-
-  </h2>
-
-  <div class="gallery-grid">
-    <a href="Main services/UI-UX Project.html" class="gallery-item">
-      <img src="assets/Placeholder.PNG" alt="Bridge" />
-    </a>
-    <a href="Main servicesGraphic design.html" class="gallery-item">
-      <img src="assets/Placeholder.PNG" alt="Sunset Rock" />
-    </a>
-    <a href="Main servicesphotography.html" class="gallery-item">
-      <img src="assets/Placeholder.PNG" alt="Bird" />
-    </a>
-    <a href="page4.html" class="gallery-item">
-      <img src="assets/Placeholder.PNG" alt="Lions Gate Bridge" />
-    </a>
-  </div>
-</section> -->
-
-
-<div class="full-bg-wrapper">
+<div class="full-bg-wrapper" style="  background: url('/assets/Background-3.svg') no-repeat center center / cover;">
   <section class="notes-section">
     <div class="textalign">
       <h2>I’m not all about work</h2>
@@ -226,15 +240,15 @@
       <div class="note-top-bar"></div>
       <h3><strong>Dream</strong></h3>
       <ul>
-        <li> Land dream UX job</li>
+        <li> Land dream UI-UX job</li>
         <li class="done">Drink Water</li>
         <li>Build the Banger Spotify Playlist</li>
-        <li> To buy Onitsuka tiger'S</li>
+        <li> buy Onitsuka tiger'S</li>
         <li> Live <b>a happy life</b></li>
         <li>Learn one more tool I’ll never use</li>
         <li class="done">to watch one movie in IMAX</li>
         <li>Pretend I understand blockchain</li>
-        <li> mine <b>start</b> my own business</li>
+        <li> mind <b>start</b> my own business</li>
       </ul>
     </div>
 
@@ -278,7 +292,7 @@
   <h1>Keep in Touch with me</h1>
   <h2>Say hi!</h2>
   <p>
-    <a href="mailto:KartikBhanderi1@gmail.com">KartikBhanderi1@gmail.com</a>
+  <a href="mailto:KartikBhanderi1@gmail.com">KartikBhanderi1@gmail.com</a>
   </p>
 </section>
 
@@ -287,7 +301,7 @@
   <div class="footer-left">
     <a href="#home">Home</a>
     <a href="#Aboutme">About me</a>
-    <a href="#work">Work</a>
+    <a href="#Work">Work</a>
   </div>
 
   <div class="footer-right">
@@ -310,6 +324,6 @@
 
   </div>
 
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
